@@ -4,6 +4,7 @@
 const React = require('react'); // <1>
 const ReactDOM = require('react-dom'); // <2>
 const client = require('./client'); // <3>
+import { Button, DatePicker } from 'antd';
 // end::vars[]
 
 // tag::app[]
@@ -22,7 +23,11 @@ class App extends React.Component { // <1>
 
 	render() { // <3>
 		return (
+		<div>
+            <Button type="primary">PRESS ME</Button>
+            <DatePicker placeholder="select date" />
 			<EmployeeList employees={this.state.employees}/>
+        </div>
 		)
 	}
 }
